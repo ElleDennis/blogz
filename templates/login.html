@@ -1,30 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
 <style>
     .error {
         color: red;
     }
 </style>
-<h1>Create Post</h1>
+<h1>Login</h1>
     <p class="error">{{ error }}</p>
     <form method="post">
         <table>
             <tr>
-                <td><label for="title">Title</label></td>
+                <td><label for="username">Username</label></td>
                 <td>
-                    <input name="title" type="text" value="{{title}}">
+                    <input name="username" type="text" value="{{ username }}">
                 </td>
             </tr>
             <tr>
-                <td><label for="blogpost">Blog Post</label></td>
+                <td><label for="password">Password</label></td>
                 <td>
-                    <textarea name="body">{{body}}</textarea>
+                    <input name="password" type="password">
                 </td>
             </tr>
         </table>
         <input type="submit">
     </form>
-
+    <p> Don't have an account?<a href="/signup">Sign Up!</a></p>
 {% endblock %}
